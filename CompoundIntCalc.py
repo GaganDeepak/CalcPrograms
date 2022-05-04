@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 #Program to calculate the compound interest for given period and investment amount
+#locale helps in printing in currency format
 import locale
 locale.setlocale( locale.LC_ALL, '' )
 print("Program to calculate compounding interest\n")
@@ -8,6 +9,7 @@ while True:
     interest = float(input("\nenter the interest rate\n"))
     period = int(input("\nenter the period\n"))
     amount = investment
+    #interest rate for computation
     rate = 1+(interest/100)
     for i in range(period):
         amount = amount * rate
